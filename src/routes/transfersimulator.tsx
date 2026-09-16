@@ -6,7 +6,6 @@ import {
   Landmark,
   AtSign,
   Smartphone,
-  HelpCircle,
   ClipboardList,
   User,
   PlusCircle,
@@ -82,9 +81,7 @@ function TransferPage() {
 
         <div className="ts-field-head">
           <h3>رقم الهاتف</h3>
-          <span className="ts-help" aria-hidden="true">
-            <HelpCircle strokeWidth={2.2} />
-          </span>
+          <span className="ts-help" aria-hidden="true">؟</span>
         </div>
 
         <div className="ts-input-row">
