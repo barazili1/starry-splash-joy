@@ -169,10 +169,17 @@ function HomePage() {
         </div>
         <div className="services-grid">
           {services.map(({ label, image }) => (
-            <div className="service-tile" key={label}>
+            <button
+              type="button"
+              className="service-tile"
+              key={label}
+              onClick={() => {
+                if (label === "ارسال نقود") navigate({ to: "/transfersimulator" });
+              }}
+            >
               <img className="service-icon" src={image} alt="" />
               <p>{label}</p>
-            </div>
+            </button>
           ))}
         </div>
       </section>
