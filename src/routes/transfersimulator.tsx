@@ -1,21 +1,18 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import {
-  ChevronDown,
-  Wallet,
-  CreditCard,
-  Landmark,
-  AtSign,
-  Smartphone,
-  ClipboardList,
-  User,
-  PlusCircle,
-} from "lucide-react";
+import { ChevronDown, PlusCircle } from "lucide-react";
 import bankLogo from "@/assets/bank-reference.png";
 import navHome from "@/assets/nav-home.png";
 import navSend from "@/assets/nav-send.png";
 import navRequest from "@/assets/nav-request.png";
 import navBills from "@/assets/nav-bills.png";
 import navMenu from "@/assets/nav-menu.png";
+import iconPhone from "@/assets/phone.png";
+import iconAt from "@/assets/at.png";
+import iconBank from "@/assets/bank.png";
+import iconCard from "@/assets/card.png";
+import iconWallet from "@/assets/wallet.png";
+import iconPerson from "@/assets/person.png";
+import iconClipboard from "@/assets/clipboard.png";
 
 export const Route = createFileRoute("/transfersimulator")({
   head: () => ({
@@ -67,19 +64,19 @@ function TransferPage() {
 
         <div className="ts-tabs" role="tablist">
           <button type="button" role="tab" aria-selected="true" className="ts-tab active">
-            <Smartphone strokeWidth={2.2} />
+            <img src={iconPhone} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <AtSign strokeWidth={2.2} />
+            <img src={iconAt} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <Landmark strokeWidth={2.2} />
+            <img src={iconBank} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <CreditCard strokeWidth={2.2} />
+            <img src={iconCard} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <Wallet strokeWidth={2.2} />
+            <img src={iconWallet} alt="" />
           </button>
         </div>
 
@@ -92,11 +89,11 @@ function TransferPage() {
           <div className="ts-input">
             <input type="tel" placeholder="رقم الهاتف" dir="rtl" />
             <span className="ts-input-icon">
-              <ClipboardList strokeWidth={2.2} />
+              <img src={iconClipboard} alt="" />
             </span>
           </div>
           <button type="button" className="ts-contact" aria-label="جهات الاتصال">
-            <User strokeWidth={2.2} />
+            <img src={iconPerson} alt="" />
           </button>
         </div>
 
