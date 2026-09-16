@@ -110,9 +110,11 @@ function HomePage() {
 
   useEffect(() => {
     if (sessionStorage.getItem("pendingBalance") !== "1") return;
-    sessionStorage.removeItem("pendingBalance");
     setBalanceLoading(true);
-    const t = window.setTimeout(() => navigate({ to: "/balance" }), 2500);
+    const t = window.setTimeout(() => {
+      sessionStorage.removeItem("pendingBalance");
+      navigate({ to: "/balance" });
+    }, 2500);
     return () => window.clearTimeout(t);
   }, [navigate]);
 
