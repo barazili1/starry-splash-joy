@@ -33,15 +33,14 @@ function PinPage() {
   const navigate = useNavigate();
 
   const press = (key: string) => {
-    if (loading) return;
     if (key === "<") {
       setPin((p) => p.slice(0, -1));
       return;
     }
     if (key === "ENTER") {
       if (pin === "200200") {
-        setLoading(true);
-        window.setTimeout(() => navigate({ to: "/balance" }), 1600);
+        sessionStorage.setItem("pendingBalance", "1");
+        navigate({ to: "/home" });
       }
       return;
     }
