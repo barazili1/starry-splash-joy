@@ -1049,7 +1049,7 @@
   border: 0;
   background: none;
   color: inherit;
-  font: 700 19px/1.2 var(--font-arabic);
+  font: 700 17.5px/1.2 var(--font-arabic);
   cursor: pointer;
 }
 
@@ -1080,17 +1080,17 @@
 }
 
 .pin-account-side small {
-  font-size: 11.5px;
+  font-size: 10px;
   font-weight: 700;
 }
 
 .pin-account-side strong {
-  font-size: 13.5px;
+  font-size: 12px;
   font-weight: 800;
 }
 
 .pin-account-side span {
-  font-size: 9.5px;
+  font-size: 8px;
   font-weight: 800;
 }
 
@@ -1104,12 +1104,12 @@
 }
 
 .pin-account-total small {
-  font-size: 11.5px;
+  font-size: 10px;
   font-weight: 700;
 }
 
 .pin-account-total strong {
-  font-size: 14.5px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -1134,8 +1134,18 @@
 }
 
 .pin-label h1 {
-  font-size: 15.5px;
+  font-size: 14px;
   font-weight: 800;
+}
+
+.pin-eye {
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: oklch(0.35 0 0);
 }
 
 .pin-label svg {
@@ -1173,7 +1183,7 @@
   align-items: center;
   justify-content: space-between;
   margin: 26px -15px 0;
-  font-size: 15px;
+  font-size: 13.5px;
   color: oklch(0.12 0 0);
 }
 
@@ -1185,12 +1195,12 @@
 }
 
 .pin-key {
-  height: 94px;
+  height: 92.5px;
   padding: 0;
   border: 0;
   background: none;
   color: oklch(0.06 0 0);
-  font: 800 26px/1 var(--font-arabic);
+  font: 800 24.5px/1 var(--font-arabic);
   cursor: pointer;
 }
 
