@@ -1,21 +1,18 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import {
-  ChevronDown,
-  Wallet,
-  CreditCard,
-  Landmark,
-  AtSign,
-  Smartphone,
-  ClipboardList,
-  User,
-  PlusCircle,
-} from "lucide-react";
+import { ChevronDown, PlusCircle } from "lucide-react";
 import bankLogo from "@/assets/bank-reference.png";
 import navHome from "@/assets/nav-home.png";
 import navSend from "@/assets/nav-send.png";
 import navRequest from "@/assets/nav-request.png";
 import navBills from "@/assets/nav-bills.png";
 import navMenu from "@/assets/nav-menu.png";
+import iconPhone from "@/assets/phone.png";
+import iconAt from "@/assets/at.png";
+import iconBank from "@/assets/bank.png";
+import iconCard from "@/assets/card.png";
+import iconWallet from "@/assets/wallet.png";
+import iconPerson from "@/assets/person.png";
+import iconClipboard from "@/assets/clipboard.png";
 
 export const Route = createFileRoute("/transfersimulator")({
   head: () => ({
