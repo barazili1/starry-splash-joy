@@ -35,9 +35,7 @@ function TransferPage() {
   const navigate = useNavigate();
   return (
     <div className="ts" dir="rtl" lang="ar">
-      <header className="ts-hero">
-        <h1>إرسال نقود</h1>
-      </header>
+      <header className="ts-hero" />
 
       <section className="ts-from">
         <img className="ts-from-logo" src={bankLogo} alt="" />
