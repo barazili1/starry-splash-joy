@@ -43,7 +43,13 @@ function TransferPage() {
         <img className="ts-from-logo" src={bankLogo} alt="" />
         <div className="ts-from-info">
           <small>من</small>
-          <p dir="ltr">mohamed.othman4279@instapay</p>
+          <input
+            className="ts-from-name"
+            type="text"
+            dir="ltr"
+            defaultValue="mohamed.othman4279@instapay"
+            aria-label="اسم المرسل"
+          />
           <span>PREPAID</span>
         </div>
         <button type="button" className="ts-from-toggle" aria-label="تغيير">
