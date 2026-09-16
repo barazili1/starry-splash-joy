@@ -1273,34 +1273,12 @@
 .ts-hero {
   position: relative;
   height: 180px;
-  background:
-    radial-gradient(120% 90% at 100% 0%, oklch(0.42 0.22 300) 0%, oklch(0.32 0.22 300) 55%, oklch(0.26 0.20 300) 100%),
-    oklch(0.32 0.22 300);
+  background-image: url("/__l5e/assets-v1/67396faf-c0b6-45db-a0f0-a5aae6e84c19/ts-hero-bg.jpeg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
   overflow: hidden;
   border-bottom-left-radius: 0;
-}
-.ts-hero::before,
-.ts-hero::after {
-  content: "";
-  position: absolute;
-  background: oklch(0.68 0.19 42);
-}
-.ts-hero::before {
-  width: 230px;
-  height: 120px;
-  top: -34px;
-  left: -60px;
-  border-radius: 0 60px 60px 0;
-  transform: rotate(-16deg);
-}
-.ts-hero::after {
-  width: 200px;
-  height: 120px;
-  top: 8px;
-  left: -70px;
-  border-radius: 0 56px 56px 0;
-  transform: rotate(-16deg);
-  background: oklch(0.72 0.14 33 / 0.85);
 }
 .ts-hero h1 {
   position: absolute;
