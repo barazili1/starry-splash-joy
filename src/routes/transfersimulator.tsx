@@ -119,22 +119,31 @@ function TransferPage() {
 
       <button type="button" className="ts-next">التالي</button>
 
-      <nav className="ts-nav" aria-label="التنقل">
-        <button type="button" aria-label="القائمة">
-          <Menu strokeWidth={2} />
+      <nav className="bottom-nav" aria-label="التنقل">
+        <button
+          type="button"
+          className="nav-item"
+          aria-label="الرئيسية"
+          onClick={() => navigate({ to: "/home" })}
+        >
+          <img src={navHome} alt="" />
+          <span>الرئيسية</span>
         </button>
-        <button type="button" aria-label="المعاملات">
-          <Receipt strokeWidth={2} />
+        <button type="button" className="nav-item active" aria-label="ارسال نقود">
+          <img src={navSend} alt="" />
+          <span>ارسال نقود</span>
         </button>
-        <button type="button" aria-label="استلام">
-          <ArrowDownLeft strokeWidth={2} />
+        <button type="button" className="nav-item" aria-label="طلب دفع">
+          <img src={navRequest} alt="" />
+          <span>طلب دفع</span>
         </button>
-        <button type="button" className="active" aria-label="ارسال">
-          <ArrowUpRight strokeWidth={2} />
-          <small>ارسال</small>
+        <button type="button" className="nav-item" aria-label="الفواتير">
+          <img src={navBills} alt="" />
+          <span>الفواتير</span>
         </button>
-        <button type="button" aria-label="الرئيسية" onClick={() => navigate({ to: "/home" })}>
-          <Home strokeWidth={2} />
+        <button type="button" className="nav-item" aria-label="القائمة">
+          <img src={navMenu} alt="" />
+          <span>القائمة</span>
         </button>
       </nav>
     </div>
