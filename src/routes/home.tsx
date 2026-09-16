@@ -51,12 +51,12 @@ export const Route = createFileRoute("/home")({
 });
 
 const services = [
-  { label: "ارسال نقود", image: serviceSend.url },
-  { label: "طلب دفع", image: serviceRequest.url },
-  { label: "دفع فواتير", image: serviceBills.url },
-  { label: "التبرعات", image: serviceDonations.url },
-  { label: "عرض الحسابات", image: serviceAccounts.url },
-  { label: "المعاملات السابقة", image: serviceHistory.url },
+  { label: "ارسال نقود", image: serviceSend },
+  { label: "طلب دفع", image: serviceRequest },
+  { label: "دفع فواتير", image: serviceBills },
+  { label: "التبرعات", image: serviceDonations },
+  { label: "عرض الحسابات", image: serviceAccounts },
+  { label: "المعاملات السابقة", image: serviceHistory },
 ];
 
 const transactions = [
@@ -125,7 +125,7 @@ function HomePage() {
       <section className="home-section">
         <div className="account-card">
           <div className="account-top">
-            <img src={bankLogo.url} alt="البنك" loading="lazy" width={130} height={130} />
+            <img src={bankLogo} alt="البنك" loading="lazy" width={130} height={130} />
             <div className="account-id">
               <p>mohamed.othman4279@instapay</p>
               <small>
@@ -135,15 +135,15 @@ function HomePage() {
           </div>
           <div className="account-actions">
             <button type="button" onClick={() => setQrOpen(true)}>
-              <img src={actionQr.url} alt="" />
+              <img src={actionQr} alt="" />
               <span>مشاركة QR</span>
             </button>
             <button type="button">
-              <img src={actionLink.url} alt="" />
+              <img src={actionLink} alt="" />
               <span>رابط</span>
             </button>
             <button type="button" onClick={() => setLoading(true)}>
-              <img src={actionBalance.url} alt="" />
+              <img src={actionBalance} alt="" />
               <span>الرصيد</span>
             </button>
           </div>
@@ -243,17 +243,17 @@ function HomePage() {
       {qrOpen && (
         <div className="qr-overlay" role="dialog" aria-modal="true" aria-label="مشاركة QR">
           <div className="qr-card">
-            <img className="qr-image" src={qrCode.url} alt="رمز QR" />
+            <img className="qr-image" src={qrCode} alt="رمز QR" />
             <p className="qr-handle" dir="ltr">
               mohamed.othman4279@instapay
             </p>
             <div className="qr-actions">
               <button type="button">
-                <img src={btnQr.url} alt="" />
+                <img src={btnQr} alt="" />
                 <span>مشاركة QR</span>
               </button>
               <button type="button">
-                <img src={btnShare.url} alt="" />
+                <img src={btnShare} alt="" />
                 <span>مشاركة الرابط</span>
               </button>
             </div>

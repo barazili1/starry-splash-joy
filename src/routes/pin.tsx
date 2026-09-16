@@ -41,7 +41,7 @@ function PinPage() {
   return (
     <div className="pin" dir="rtl" lang="ar">
       <header className="pin-header">
-        <img className="pin-ipn" src={ipnLogo.url} alt="IPN" />
+        <img className="pin-ipn" src={ipnLogo} alt="IPN" />
         <button type="button" className="pin-bank" onClick={() => navigate({ to: "/home" })}>
           <span dir="ltr">National Bank of Egypt</span>
           <ChevronRight strokeWidth={2.4} />
