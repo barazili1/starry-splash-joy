@@ -41,23 +41,23 @@ function TransferPage() {
       </header>
 
       <section className="ts-from">
-        <button type="button" className="ts-from-toggle" aria-label="تغيير">
-          <ChevronDown strokeWidth={2.2} />
-        </button>
+        <img className="ts-from-logo" src={bankLogo} alt="" />
         <div className="ts-from-info">
           <small>من</small>
           <p dir="ltr">mohamed.othman4279@instapay</p>
           <span>PREPAID</span>
         </div>
-        <img className="ts-from-logo" src={bankLogo} alt="" />
+        <button type="button" className="ts-from-toggle" aria-label="تغيير">
+          <ChevronDown strokeWidth={2.2} />
+        </button>
       </section>
 
       <section className="ts-card">
         <div className="ts-card-head">
           <h2>إرسال النقود إلى</h2>
           <button type="button" className="ts-fav">
+            <span className="ts-fav-star" aria-hidden="true">☆</span>
             <span>المفضلين</span>
-            <span className="ts-fav-star" aria-hidden="true">★</span>
             <span className="ts-fav-chev" aria-hidden="true">‹</span>
           </button>
         </div>
@@ -89,10 +89,10 @@ function TransferPage() {
 
         <div className="ts-input-row">
           <div className="ts-input">
+            <input type="tel" placeholder="رقم الهاتف" dir="rtl" />
             <span className="ts-input-icon">
               <ClipboardList strokeWidth={2.2} />
             </span>
-            <input type="tel" placeholder="رقم الهاتف" dir="rtl" />
           </div>
           <button type="button" className="ts-contact" aria-label="جهات الاتصال">
             <User strokeWidth={2.2} />
@@ -100,8 +100,9 @@ function TransferPage() {
         </div>
 
         <div className="ts-amount">
-          <span className="ts-currency">EGP</span>
           <input type="text" placeholder="المبلغ" dir="rtl" />
+          <span className="ts-amount-sep" aria-hidden="true" />
+          <span className="ts-currency">EGP</span>
         </div>
       </section>
 
