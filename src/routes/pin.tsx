@@ -27,6 +27,7 @@ const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "<", "0", "ENTER"];
 
 function PinPage() {
   const [pin, setPin] = useState("");
+  const [showPin, setShowPin] = useState(false);
   const navigate = useNavigate();
 
   const press = (key: string) => {
@@ -66,16 +67,31 @@ function PinPage() {
           <h1>
             أدخل الرقم السري <span dir="ltr">IPN PIN</span>
           </h1>
-          <Eye strokeWidth={1.8} />
+          <button
+            type="button"
+            className="pin-eye"
+            aria-pressed={showPin}
+            onClick={() => setShowPin((s) => !s)}
+          >
+            <Eye strokeWidth={1.8} />
+          </button>
         </div>
 
-        <div className="pin-boxes" dir="rtl">
+        <div className="pin-boxes" dir="ltr">
           {Array.from({ length: 6 }).map((_, i) => (
             <div
               key={i}
               className={`pin-box${i === Math.min(pin.length, 5) ? " active" : ""}`}
             >
-              {pin[i] ? "•" : ""}
+              {pin[i] ? (
+                showPin ? (
+                  <span className="pin-digit">{pin[i]}</span>
+                ) : (
+                  <span className="pin-dot" />
+                )
+              ) : (
+                ""
+              )}
             </div>
           ))}
         </div>
