@@ -64,19 +64,19 @@ function TransferPage() {
 
         <div className="ts-tabs" role="tablist">
           <button type="button" role="tab" aria-selected="true" className="ts-tab active">
-            <Smartphone strokeWidth={2.2} />
+            <img src={iconPhone} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <AtSign strokeWidth={2.2} />
+            <img src={iconAt} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <Landmark strokeWidth={2.2} />
+            <img src={iconBank} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <CreditCard strokeWidth={2.2} />
+            <img src={iconCard} alt="" />
           </button>
           <button type="button" role="tab" className="ts-tab">
-            <Wallet strokeWidth={2.2} />
+            <img src={iconWallet} alt="" />
           </button>
         </div>
 
@@ -89,11 +89,11 @@ function TransferPage() {
           <div className="ts-input">
             <input type="tel" placeholder="رقم الهاتف" dir="rtl" />
             <span className="ts-input-icon">
-              <ClipboardList strokeWidth={2.2} />
+              <img src={iconClipboard} alt="" />
             </span>
           </div>
           <button type="button" className="ts-contact" aria-label="جهات الاتصال">
-            <User strokeWidth={2.2} />
+            <img src={iconPerson} alt="" />
           </button>
         </div>
 
