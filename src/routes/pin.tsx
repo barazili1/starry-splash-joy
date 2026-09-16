@@ -28,7 +28,6 @@ const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "<", "0", "ENTER"];
 function PinPage() {
   const [pin, setPin] = useState("");
   const [showPin, setShowPin] = useState(false);
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const press = (key: string) => {
@@ -121,12 +120,6 @@ function PinPage() {
           </button>
         ))}
       </div>
-
-      {loading && (
-        <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
-          <ProgressMark size={90} />
-        </div>
-      )}
     </div>
   );
 }
