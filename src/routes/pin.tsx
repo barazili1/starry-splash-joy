@@ -2,6 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronRight, ChevronDown, Eye } from "lucide-react";
 import ipnLogo from "@/assets/ipn-color.png";
+import { ProgressMark } from "@/components/progress-mark";
 
 export const Route = createFileRoute("/pin")({
   head: () => ({
@@ -122,6 +123,12 @@ function PinPage() {
           </button>
         ))}
       </div>
+
+      {loading && (
+        <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
+          <ProgressMark size={90} />
+        </div>
+      )}
     </div>
   );
 }

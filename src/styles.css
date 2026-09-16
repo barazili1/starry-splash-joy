@@ -1221,3 +1221,33 @@
   font-size: 21.5px;
   letter-spacing: 0.01em;
 }
+
+.balance-body {
+  padding: 90px 24px 0;
+  text-align: center;
+}
+
+.balance-label {
+  font-size: 16px;
+  font-weight: 500;
+  color: oklch(0.15 0 0);
+}
+
+.balance-amount {
+  margin-top: 26px;
+  font-size: 36px;
+  font-weight: 500;
+  color: oklch(0.15 0 0);
+  letter-spacing: 0.005em;
+}
+
+.balance-back {
+  margin: auto 24px 32px;
+  height: 54px;
+  border: 0;
+  border-radius: 10px;
+  background: oklch(0.28 0.02 260);
+  color: oklch(1 0 0);
+  font: 700 16px/1 var(--font-arabic);
+  cursor: pointer;
+}
