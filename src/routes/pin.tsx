@@ -1,7 +1,7 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronRight, ChevronDown, Eye } from "lucide-react";
-import ipnLogo from "@/assets/ipn-color.png.asset.json";
+import ipnLogo from "@/assets/ipn-color.png";
 
 export const Route = createFileRoute("/pin")({
   head: () => ({

@@ -9,26 +9,26 @@ import {
   Smartphone,
   X,
 } from "lucide-react";
-import qrCode from "@/assets/qr-code.png.asset.json";
-import btnQr from "@/assets/btn-qr.png.asset.json";
-import btnShare from "@/assets/btn-share.png.asset.json";
+import qrCode from "@/assets/qr-code.png";
+import btnQr from "@/assets/btn-qr.png";
+import btnShare from "@/assets/btn-share.png";
 import homeHeader from "@/assets/home-header.jpeg";
-import bankLogo from "@/assets/bank-reference.png.asset.json";
+import bankLogo from "@/assets/bank-reference.png";
 import ipnLogo from "@/assets/ipn-logo.png";
 import navHome from "@/assets/nav-home.png";
 import navSend from "@/assets/nav-send.png";
 import navRequest from "@/assets/nav-request.png";
 import navBills from "@/assets/nav-bills.png";
 import navMenu from "@/assets/nav-menu.png";
-import actionBalance from "@/assets/action-balance.png.asset.json";
-import actionLink from "@/assets/action-link.png.asset.json";
-import actionQr from "@/assets/action-qr.png.asset.json";
-import serviceBills from "@/assets/service-bills.png.asset.json";
-import serviceRequest from "@/assets/service-request.png.asset.json";
-import serviceSend from "@/assets/service-send.png.asset.json";
-import serviceHistory from "@/assets/service-history.png.asset.json";
-import serviceAccounts from "@/assets/service-accounts.png.asset.json";
-import serviceDonations from "@/assets/service-donations.png.asset.json";
+import actionBalance from "@/assets/action-balance.png";
+import actionLink from "@/assets/action-link.png";
+import actionQr from "@/assets/action-qr.png";
+import serviceBills from "@/assets/service-bills.png";
+import serviceRequest from "@/assets/service-request.png";
+import serviceSend from "@/assets/service-send.png";
+import serviceHistory from "@/assets/service-history.png";
+import serviceAccounts from "@/assets/service-accounts.png";
+import serviceDonations from "@/assets/service-donations.png";
 
 export const Route = createFileRoute("/home")({
   head: () => ({
