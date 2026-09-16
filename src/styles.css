@@ -1283,26 +1283,24 @@
 .ts-hero::after {
   content: "";
   position: absolute;
-  border-radius: 50% 40% 55% 45% / 55% 60% 40% 45%;
-  background: linear-gradient(135deg, oklch(0.78 0.19 45), oklch(0.7 0.22 35));
-  filter: saturate(1.1);
+  background: oklch(0.68 0.19 42);
 }
 .ts-hero::before {
-  width: 260px;
-  height: 220px;
-  top: -70px;
-  left: -70px;
-  transform: rotate(-18deg);
-  opacity: 0.95;
+  width: 230px;
+  height: 120px;
+  top: -34px;
+  left: -60px;
+  border-radius: 0 60px 60px 0;
+  transform: rotate(-16deg);
 }
 .ts-hero::after {
-  width: 180px;
-  height: 150px;
-  top: 30px;
-  left: 40px;
-  transform: rotate(15deg);
-  opacity: 0.55;
-  background: linear-gradient(135deg, oklch(0.82 0.16 45), oklch(0.75 0.2 35));
+  width: 200px;
+  height: 120px;
+  top: 8px;
+  left: -70px;
+  border-radius: 0 56px 56px 0;
+  transform: rotate(-16deg);
+  background: oklch(0.72 0.14 33 / 0.85);
 }
 .ts-hero h1 {
   position: absolute;
