@@ -236,7 +236,7 @@ function HomePage() {
 
       {loading && (
         <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
-          <ProgressMark size={56} />
+          <ProgressMark size={90} />
         </div>
       )}
 
