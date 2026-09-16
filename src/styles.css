@@ -497,6 +497,11 @@
   border-radius: 1rem;
   background: oklch(1 0 0);
   box-shadow: 0 10px 24px -22px oklch(0.3 0.05 280 / 0.6);
+  border: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  width: 100%;
 }
 
 .service-icon {
