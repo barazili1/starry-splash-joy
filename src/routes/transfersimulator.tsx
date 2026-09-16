@@ -1,0 +1,140 @@
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import {
+  ChevronDown,
+  Wallet,
+  CreditCard,
+  Landmark,
+  AtSign,
+  Smartphone,
+  HelpCircle,
+  ClipboardList,
+  User,
+  PlusCircle,
+  Menu,
+  Receipt,
+  ArrowDownLeft,
+  ArrowUpRight,
+  Home,
+} from "lucide-react";
+import bankLogo from "@/assets/bank-reference.png";
+
+export const Route = createFileRoute("/transfersimulator")({
+  head: () => ({
+    meta: [
+      { title: "إرسال نقود | Instapay" },
+      { name: "description", content: "إرسال النقود إلى المفضلين عبر Instapay." },
+      { property: "og:title", content: "إرسال نقود | Instapay" },
+      { property: "og:description", content: "إرسال النقود إلى المفضلين عبر Instapay." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
+  component: TransferPage,
+});
+
+function TransferPage() {
+  const navigate = useNavigate();
+  return (
+    <div className="ts" dir="rtl" lang="ar">
+      <header className="ts-hero">
+        <h1>إرسال نقود</h1>
+      </header>
+
+      <section className="ts-from">
+        <button type="button" className="ts-from-toggle" aria-label="تغيير">
+          <ChevronDown strokeWidth={2.2} />
+        </button>
+        <div className="ts-from-info">
+          <small>من</small>
+          <p dir="ltr">mohamed.othman4279@instapay</p>
+          <span>PREPAID</span>
+        </div>
+        <img className="ts-from-logo" src={bankLogo} alt="" />
+      </section>
+
+      <section className="ts-card">
+        <div className="ts-card-head">
+          <h2>إرسال النقود إلى</h2>
+          <button type="button" className="ts-fav">
+            <span>المفضلين</span>
+            <span className="ts-fav-star" aria-hidden="true">★</span>
+            <span className="ts-fav-chev" aria-hidden="true">‹</span>
+          </button>
+        </div>
+
+        <div className="ts-tabs" role="tablist">
+          <button type="button" role="tab" aria-selected="true" className="ts-tab active">
+            <Smartphone strokeWidth={2.2} />
+          </button>
+          <button type="button" role="tab" className="ts-tab">
+            <AtSign strokeWidth={2.2} />
+          </button>
+          <button type="button" role="tab" className="ts-tab">
+            <Landmark strokeWidth={2.2} />
+          </button>
+          <button type="button" role="tab" className="ts-tab">
+            <CreditCard strokeWidth={2.2} />
+          </button>
+          <button type="button" role="tab" className="ts-tab">
+            <Wallet strokeWidth={2.2} />
+          </button>
+        </div>
+
+        <div className="ts-field-head">
+          <h3>رقم الهاتف</h3>
+          <span className="ts-help" aria-hidden="true">
+            <HelpCircle strokeWidth={2.2} />
+          </span>
+        </div>
+
+        <div className="ts-input-row">
+          <div className="ts-input">
+            <span className="ts-input-icon">
+              <ClipboardList strokeWidth={2.2} />
+            </span>
+            <input type="tel" placeholder="رقم الهاتف" dir="rtl" />
+          </div>
+          <button type="button" className="ts-contact" aria-label="جهات الاتصال">
+            <User strokeWidth={2.2} />
+          </button>
+        </div>
+
+        <div className="ts-amount">
+          <span className="ts-currency">EGP</span>
+          <input type="text" placeholder="المبلغ" dir="rtl" />
+        </div>
+      </section>
+
+      <div className="ts-dots" aria-hidden="true">
+        <span />
+        <span className="on" />
+      </div>
+
+      <button type="button" className="ts-reason">
+        <PlusCircle strokeWidth={2.2} />
+        <span>أضف سبب التحويل</span>
+      </button>
+
+      <button type="button" className="ts-next">التالي</button>
+
+      <nav className="ts-nav" aria-label="التنقل">
+        <button type="button" aria-label="القائمة">
+          <Menu strokeWidth={2} />
+        </button>
+        <button type="button" aria-label="المعاملات">
+          <Receipt strokeWidth={2} />
+        </button>
+        <button type="button" aria-label="استلام">
+          <ArrowDownLeft strokeWidth={2} />
+        </button>
+        <button type="button" className="active" aria-label="ارسال">
+          <ArrowUpRight strokeWidth={2} />
+          <small>ارسال</small>
+        </button>
+        <button type="button" aria-label="الرئيسية" onClick={() => navigate({ to: "/home" })}>
+          <Home strokeWidth={2} />
+        </button>
+      </nav>
+    </div>
+  );
+}
