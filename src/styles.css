@@ -1280,17 +1280,8 @@
   overflow: hidden;
   border-bottom-left-radius: 0;
 }
-.ts-hero h1 {
-  position: absolute;
-  top: 34px;
-  right: 20px;
-  margin: 0;
-  color: oklch(1 0 0);
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  z-index: 2;
-}
+
+
 
 .ts-from {
   margin: -46px 16px 0;
@@ -1548,7 +1539,7 @@
 
 .ts-next {
   position: fixed;
-  bottom: 72px;
+  bottom: 80px;
   left: 16px;
   right: 16px;
   height: 52px;
@@ -1563,39 +1554,3 @@
   box-shadow: 0 10px 24px -12px oklch(0.4 0.22 300 / 0.6);
 }
 
-.ts-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 60px;
-  background: oklch(1 0 0);
-  border-top: 1px solid oklch(0.94 0 0);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  padding: 0 8px;
-  direction: ltr;
-}
-.ts-nav button {
-  border: 0;
-  background: transparent;
-  display: grid;
-  place-items: center;
-  gap: 2px;
-  color: oklch(0.5 0 0);
-  cursor: pointer;
-  font-family: var(--font-arabic);
-  font-size: 11px;
-  padding: 4px 0;
-}
-.ts-nav button svg { width: 22px; height: 22px; }
-.ts-nav button.active { color: oklch(0.42 0.24 300); }
-.ts-nav button.active svg {
-  padding: 4px;
-  border-radius: 50%;
-  border: 1.5px solid oklch(0.42 0.24 300);
-  box-sizing: content-box;
-  width: 18px;
-  height: 18px;
-}
