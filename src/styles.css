@@ -1280,17 +1280,8 @@
   overflow: hidden;
   border-bottom-left-radius: 0;
 }
-.ts-hero h1 {
-  position: absolute;
-  top: 34px;
-  right: 20px;
-  margin: 0;
-  color: oklch(1 0 0);
-  font-size: 32px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-  z-index: 2;
-}
+
+
 
 .ts-from {
   margin: -46px 16px 0;
