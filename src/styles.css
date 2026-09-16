@@ -1554,39 +1554,3 @@
   box-shadow: 0 10px 24px -12px oklch(0.4 0.22 300 / 0.6);
 }
 
-.ts-nav {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 60px;
-  background: oklch(1 0 0);
-  border-top: 1px solid oklch(0.94 0 0);
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  align-items: center;
-  padding: 0 8px;
-  direction: ltr;
-}
-.ts-nav button {
-  border: 0;
-  background: transparent;
-  display: grid;
-  place-items: center;
-  gap: 2px;
-  color: oklch(0.5 0 0);
-  cursor: pointer;
-  font-family: var(--font-arabic);
-  font-size: 11px;
-  padding: 4px 0;
-}
-.ts-nav button svg { width: 22px; height: 22px; }
-.ts-nav button.active { color: oklch(0.42 0.24 300); }
-.ts-nav button.active svg {
-  padding: 4px;
-  border-radius: 50%;
-  border: 1.5px solid oklch(0.42 0.24 300);
-  box-sizing: content-box;
-  width: 18px;
-  height: 18px;
-}
