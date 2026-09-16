@@ -2,7 +2,6 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronRight, ChevronDown, Eye } from "lucide-react";
 import ipnLogo from "@/assets/ipn-color.png";
-import { ProgressMark } from "@/components/progress-mark";
 
 export const Route = createFileRoute("/pin")({
   head: () => ({
@@ -29,19 +28,17 @@ const keys = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "<", "0", "ENTER"];
 function PinPage() {
   const [pin, setPin] = useState("");
   const [showPin, setShowPin] = useState(false);
-  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const press = (key: string) => {
-    if (loading) return;
     if (key === "<") {
       setPin((p) => p.slice(0, -1));
       return;
     }
     if (key === "ENTER") {
       if (pin === "200200") {
-        setLoading(true);
-        window.setTimeout(() => navigate({ to: "/balance" }), 1600);
+        sessionStorage.setItem("pendingBalance", "1");
+        navigate({ to: "/home" });
       }
       return;
     }
@@ -123,12 +120,6 @@ function PinPage() {
           </button>
         ))}
       </div>
-
-      {loading && (
-        <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
-          <ProgressMark size={90} />
-        </div>
-      )}
     </div>
   );
 }

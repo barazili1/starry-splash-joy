@@ -105,7 +105,18 @@ const transactions = [
 function HomePage() {
   const [qrOpen, setQrOpen] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [balanceLoading, setBalanceLoading] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (sessionStorage.getItem("pendingBalance") !== "1") return;
+    setBalanceLoading(true);
+    const t = window.setTimeout(() => {
+      sessionStorage.removeItem("pendingBalance");
+      navigate({ to: "/balance" });
+    }, 2500);
+    return () => window.clearTimeout(t);
+  }, [navigate]);
 
   useEffect(() => {
     if (!loading) return;
@@ -234,7 +245,7 @@ function HomePage() {
         </button>
       </nav>
 
-      {loading && (
+      {(loading || balanceLoading) && (
         <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
           <ProgressMark size={90} />
         </div>
