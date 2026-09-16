@@ -243,7 +243,7 @@ function HomePage() {
         </button>
       </nav>
 
-      {loading && (
+      {(loading || balanceLoading) && (
         <div className="loading-overlay" role="status" aria-label="جارٍ التحميل">
           <ProgressMark size={90} />
         </div>
